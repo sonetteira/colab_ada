@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Project ADA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+<!--        START FAVICONS-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<link rel="manifest" href="images/favicons/site.webmanifest">
+<link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#132e36">
+<meta name="apple-mobile-web-app-title" content="Project Ada">
+<meta name="application-name" content="Project Ada">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+        <!--        END FAVICONS-->
+	</head>
+    
+<!--START LOGO-->
+    <img src="images/logo.png"/>
+<!--END LOGO-->
+	<body class="is-preload">
+
+		<!-- Header find in the _header.scss-->
+			<header id="header">
+				<h1>Project ADA</h1>
+				<p>An Initiative by ESCoLab. <br/> Brought to you by Pace University</p>
+			</header>
+
+		<!-- Signup Form -->
+<form id="signup-form" class="datepicker">
+            <input type="text" class="TinyPicker" id="startDate"/>
+            <input type="text" class="TinyPicker" id="endDate"/>
+        </form>
+			<form id="signup-form"  action="user_query_result.php" method="post" >      
+                <input type="button" id="ph" name="type" value="ph" />
+                <input type="button" id="temperature" name="type" value="temperature" />
+                <input type="button" id="conductivity" name="type" value="conductivity" />
+                <input type="button" id="dopct" name="type" value="dopct" />
+                <input type="button" id="domgl" name="type" value="domgl" />
+                <input type="button" id="dogain" name="type" value="dogain" />
+                <input type="button" id="turbidity" name="type" value="turbidity" />
+                <input type="button" id="depth" name="type" value="depth" />
+                <div id= "goButtonDiv">
+                    <button id = "goButton" type="submit" name="payload" value="noData">
+                    </button>
+                </div>
+			</form>
+        
+         
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+                    email: 
+					<li><a href="mailto:wb63126p@pace.edu?Subject=A Question from the ADA website" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Pace University.</li>
+<!--                    <li>Credits: HTML5 UP</li>-->
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/lib/tiny-picker-calendar.js"></script>
+            <script src="assets/js/parameter_sender.js"></script>
+
+
+	</body>
+</html>
