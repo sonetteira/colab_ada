@@ -1,0 +1,131 @@
+///
+/// Eventually by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', (
+			'background-color #{_duration(transition)} ease-in-out',
+			'color #{_duration(transition)} ease-in-out',
+			'opacity #{_duration(transition)} ease-in-out'
+		));
+		background-color: _palette(accent, bg); //color of the button not the text on the inside
+		border-radius: _size(border-radius); //the rounding of the corners of the box to look more curved
+		border: 0; //dont have any border line around the button
+		color: _palette(accent, fg-bold) !important; //## dont know what this does, nothing changes after commenting
+		cursor: pointer; //what the cursor looks like when you hover over the button in this case it is a hand
+		display: inline-block;
+		font-weight: _font(weight-bold);
+		height: _size(element-height);
+		line-height: _size(element-height);
+		padding: 0 1.125em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:hover {
+			background-color: lighten(_palette(accent, bg), 5);
+		}
+
+		&:active {
+			background-color: darken(_palette(accent, bg), 5);
+		}
+
+		&.disabled,
+		&:disabled {
+			opacity: 0.5;
+		}
+
+		@include breakpoint('<=xsmall') {
+			padding: 0;
+		}
+        
+	}
+
+//  ***START BUTTON CODE****
+
+#goButtonDiv{
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+    margin: 0;
+//    width: 100vw;
+//    height: 100vh;
+    font-family: "Source Sans Pro" sans-serif;
+    font-weight: _font(weight-bold);
+    position: relative;
+    width: 15%; // width was at 100% before, changed to 13 so the "rays" can just barely reach the last button also moved to add the date picker
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#goButton{
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    color: _palette(accent, fg-bold);
+//    background: #1ECD97;
+    background-color: _palette(accent, bg);
+    border-radius: 50%;
+    border: none;
+    transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1), opacity 0.5s ease-out;
+    &:after{
+        content: "GO!";
+        font-size: 2.7em;
+        line-height: 1.3em;
+    }
+    &:hover{
+        transform: rotate(45deg);
+        box-shadow: 0 0 1px 15px rgba(#1ECD97, 0.4),
+        0 0 1px 30px rgba(#1ECD97, 0.1),
+        0 0 1px 45px rgba(#1ECD97, 0.1);
+    }
+    cursor: pointer;
+    text-align: center;
+    
+    //css for fading-in fading-out the button
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+#toggleDiv {
+    margin: 0;
+    position: relative;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+    #downsampleToggle {
+            position: relative;
+            width: 75%;
+        }
+
+//  ***END BUTTON CODE****
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+///
+/// Eventually by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Signup Form */
+
+	#signup-form {
+		@include vendor('display', 'flex');
+		position: relative;
+
+		input[type="text"],
+		input[type="password"],
+		input[type="email"] {
+			width: 12em;
+            
+		}
+
+		> * {
+            //changed the margins for the buttons so that the GO button is aligned in the center with all the other buttons
+//			margin: 0 0 0 1em;
+            margin: auto 0 auto 1em; //aligns with GO button, reverted back to original to place calendar dates in.
+        }
+
+		> :first-child {
+			margin: auto 0 auto 0;
+		}
+//        > :nth-child(2) {
+////			margin: 0 0 0 1em;
+//		}
+
+		@include breakpoint('<=xsmall') {
+			@include vendor('flex-direction', 'column');
+
+			input[type="type"],
+			input[type="password"],
+			input[type="email"] {
+				width: 100%;
+			}
+
+			> * {
+				margin: 1.25em 0 0 0;
+			}
+
+			.message { //dont need this this is for the ajax thank you message when submitting a form
+//				bottom: -1.5em;
+				font-size: 0.9em;
+				height: 1em;
+				left: 0;
+				line-height: inherit;
+				margin-top: 0;
+				position: absolute;
+			}
+		}
+	}
