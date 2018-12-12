@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
 <!--        START FAVICONS-->
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -49,14 +50,36 @@
                     </button>
                 </div>
 			</form>
+							
         
          
 		<!-- Footer -->
 			<footer id="footer">
-				<ul class="copyright">
-					<li>&copy; Pace University.</li>
-<!--                    <li>Credits: HTML5 UP</li>-->
-				</ul>
+				<div class="sliding--menu__wrapper slide--bottom">
+					<input type="checkbox" id="navigation" />        
+					<label id="hamburger--icon" for="navigation">
+						<span class="icon-menu"></span>
+					</label>      
+			
+					<nav>
+						<ul>
+							<li><img class="site--logo" src="images/logo.png" alt="site-logo" /></li>        
+							<li>
+								<a href="index.html">Home</a>
+								<a href="index.html">Forecast</a>
+								<a href="index.html">Raw Data</a>
+								<a href="index.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				
+					<div class="obfuscator">
+					</div>        
+				</div>
+								<ul class="copyright">
+									&copy; Pace University.
+				<!--                    <li>Credits: HTML5 UP</li>-->
+								</ul>
 			</footer>
 
 		<!-- Scripts -->
